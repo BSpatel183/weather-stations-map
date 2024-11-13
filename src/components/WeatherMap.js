@@ -1,5 +1,7 @@
 import { LoadScript, GoogleMap } from '@react-google-maps/api';
-import '../App.css'; 
+import '../App.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const containerStyle = {
   width: '100%',
@@ -12,6 +14,17 @@ const center = {
 };
 
 const App = () => {
+  const [stations, setStations] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('https://localhost:7008/api/WeatherStations')  // Your API endpoint for stations
+      .then((response) => {
+        setStations(response.data);
+      })
+      .catch((error) => console.error('There was an error fetching the weather stations!', error));
+  }, []);
+
   return (
     <div className="map-container">
       {/* Main Map Section */}
