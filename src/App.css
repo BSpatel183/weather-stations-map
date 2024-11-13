@@ -40,3 +40,59 @@
 .map-container {
   position: relative;
 }
+
+/* Info Window Content */
+.info-window {
+  max-width: 300px;
+}
+
+.table-style {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+.table-style th,
+.table-style td {
+  padding: 8px;
+  text-align: left;
+}
+
+.footer-lat-lng {
+  margin-top: 10px;
+}
+
+/* Style for the state filter dropdown */
+.state-dropdown {
+  width: 200px;
+  font-size: 18px; /* Increase font size */
+  border-radius: 12px; /* Apply curved border */
+  padding: 10px; /* Increase padding for a bigger dropdown */
+  border: 1px solid #ccc; /* Border styling */
+}
+
+/* Additional styles for the map container if needed */
+.map-container {
+  width: 100%;
+  height: 600px;
+}
+
+/* InfoWindow styles */
+.info-window {
+  text-align: left;
+  border: 2px solid #2d0300;
+  max-height: 200px;
+  overflow-y: auto; /* Allow scrolling */
+  width: 250px;
+  border-radius: 12px; /* Curved border */
+  padding: 10px;
+}
+
+/* Footer with lat/lng in different font */
+.footer-lat-lng {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  color: #555;
+  margin-top: 10px;
+  text-align: center;
+}
