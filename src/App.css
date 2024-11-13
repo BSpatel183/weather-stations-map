@@ -96,3 +96,40 @@
   margin-top: 10px;
   text-align: center;
 }
+
+
+/* Filter Section on the Left */
+.filter-section {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  z-index: 10;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+
+/* Inner Container for Filter */
+.filter-container {
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Heading for Filter Section */
+.filter-heading {
+  width: 100%;
+}
+
+/* State Checkbox Styles */
+.checkbox-item {
+  flex: 1 0 auto;
+  min-width: 120px;
+}
