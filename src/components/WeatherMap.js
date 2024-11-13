@@ -1,7 +1,7 @@
-import { LoadScript, GoogleMap } from '@react-google-maps/api';
+import { LoadScript, GoogleMap, Marker } from '@react-google-maps/api';
 import '../App.css';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const containerStyle = {
   width: '100%',
@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get('https://localhost:7008/api/WeatherStations')  // Your API endpoint for stations
+      .get('https://localhost:7029/api/WeatherStations')  // Your API endpoint for stations
       .then((response) => {
         setStations(response.data);
       })
@@ -35,6 +35,12 @@ const App = () => {
             center={center}
             zoom={5}
           >
+            {stations.map((station) => (
+              <Marker
+                key={station.id}
+                position={{ lat: station.latitude, lng: station.longitude }}
+              />
+            ))}
           </GoogleMap>
         </LoadScript>
       </div>
