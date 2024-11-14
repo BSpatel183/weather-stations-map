@@ -146,6 +146,8 @@ const App = () => {
                               <th>Long Name</th>
                               <th>Variable Name</th>
                               <th>Unit</th>
+                              <th>Value</th> {/* Add a column for the variable value */}
+
                             </tr>
                           </thead>
                           <tbody>
@@ -154,6 +156,10 @@ const App = () => {
                                 <td>{variable.long_name}</td>
                                 <td>{variable.name}</td>
                                 <td>{variable.unit}</td>
+                                <td>
+                                  {variable.name === 'AirT_inst' && weatherData.airT_inst}
+                                  {variable.name === 'GHI_inst' && weatherData.ghI_inst}
+                               </td>
                               </tr>
                             ))}
                           </tbody>
